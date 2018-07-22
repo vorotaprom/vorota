@@ -1,7 +1,6 @@
 import {
   Component,
   OnInit,
-  OnDestroy,
   Inject,
   forwardRef
 } from '@angular/core';

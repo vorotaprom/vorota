@@ -11,6 +11,8 @@ export class AppComponent {
   public beforeLine = false;
   public dropMenuShow = false;
 
+  public headerBg = false;
+
   public triger = true;
 
   public showMenu() {
@@ -19,15 +21,38 @@ export class AppComponent {
       this.mainLine = true;
       this.beforeLine = true;
       this.dropMenuShow = true;
-
+      this.headerBg = true;
+      console.log(this.headerBg);
       this.triger = false;
     } else {
       this.afterLine = false;
       this.mainLine = false;
       this.beforeLine = false;
       this.dropMenuShow = false;
+      this.headerBg = false;
+      console.log(this.headerBg);
+      this.triger = true;
+    }
+  }
+  public onResize(event) {
+    if (window.innerWidth >= 768) {
+      this.afterLine = false;
+      this.mainLine = false;
+      this.beforeLine = false;
+      this.dropMenuShow = false;
+      this.headerBg = false;
 
       this.triger = true;
     }
   }
+  public onClosedMenu() {
+    this.afterLine = false;
+      this.mainLine = false;
+      this.beforeLine = false;
+      this.dropMenuShow = false;
+      this.headerBg = false;
+
+      this.triger = true;
+  }
 }
+

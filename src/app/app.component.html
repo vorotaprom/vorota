@@ -1,10 +1,10 @@
 <div class="wrapper">
-  <section class="heder__bg">
+  <section class="heder__bg" [class.heder-bg-md]="headerBg" (window:resize)="onResize($event)">
     <header class="container header">
       <a href="#" routerLink="/home">
-        <h1 class="header__logo">Ворота</h1>
+        <h1 class="header__logo">VorotaPROM</h1>
       </a>
-      <nav class="d-sm-block d-none">
+      <nav class="d-md-block d-none">
         <ul class="header__items">
           <li class="header__item">
             <a class="header__item-link" href="#" routerLink="/home" routerLinkActive="active">Главная</a>
@@ -20,7 +20,7 @@
           </li>
         </ul>
       </nav>
-      <button class="btn-drop-menu d-sm-none d-block" (click)="showMenu()">
+      <button class="btn-drop-menu d-md-none d-block" (click)="showMenu()">
         <span class="after-line" [class.after-line-show]="afterLine"></span>
         <span class="main-line" [class.main-line-show]="mainLine"></span>
         <span class="before-line" [class.before-line-show]="beforeLine"></span>
@@ -45,16 +45,12 @@
       </nav>
     </div>
   </section>
-  <section class="content">
+  <section class="content" (click)="onClosedMenu()">
     <router-outlet></router-outlet>
   </section>
 </div>
 <div class="footer__bg">
-  <footer class="container footer">
-    <p>Footer&copy;2018</p>
+  <footer class="container footer" (click)="onClosedMenu()">
+    <p>VorotaPROM &copy; 2016-2018</p>
   </footer>
 </div>
-<button class="btn-call">
-  <span class="btn-call-title">Мы Вам перезвоним!<span class="btn-closed"></span></span>
-  <img src="../assets/img/call/call_me.gif" alt="call" class="cell-img">
-</button>
