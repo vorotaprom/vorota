@@ -48,7 +48,6 @@ export class CaruselComponent implements OnInit {
     this.caruselService
       .gerCarusel()
       .then(result => (this.caruselSlides = result));
-    console.log('init-component');
     this.wow = new WOW({
       live: false
     }).init();

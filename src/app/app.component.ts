@@ -22,7 +22,6 @@ export class AppComponent {
       this.beforeLine = true;
       this.dropMenuShow = true;
       this.headerBg = true;
-      console.log(this.headerBg);
       this.triger = false;
     } else {
       this.afterLine = false;
@@ -30,7 +29,6 @@ export class AppComponent {
       this.beforeLine = false;
       this.dropMenuShow = false;
       this.headerBg = false;
-      console.log(this.headerBg);
       this.triger = true;
     }
   }
