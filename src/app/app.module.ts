@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -39,7 +41,7 @@ import { AluminiumModule } from './catalog/rollet/aluminium/aluminium.module';
 import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CaruselComponent } from './home/carusel/carusel.component';
-
+import { ModalFeadBackComponent } from './modal-fead-back/modal-fead-back.component';
 
 
 @NgModule({
@@ -49,10 +51,14 @@ import { CaruselComponent } from './home/carusel/carusel.component';
     HomeComponent,
     GalleryComponent,
     CaruselComponent,
+    ModalFeadBackComponent,
   ],
   imports: [
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
+    FormsModule,
+    CommonModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     CatalogModule,

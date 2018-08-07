@@ -1,0 +1,40 @@
+<button class="btn-call" [style.display]="displayCall ? 'block' : 'none'">
+  <span class="btn-call-title">Мы Вам перезвоним!
+    <span class="btn-closed" (click)="btnClosed()"></span>
+  </span>
+  <img src="../assets/img/call/call_me.gif" alt="call" class="cell-img" (click)="openModal(template)">
+</button>
+<ng-template #template>
+  <div class="modal-header">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form class="form" novalidate [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="control-wrap">
+        <input type="text" formControlName="name" class="form-imput" required placeholder="ваше имя" [ngClass]="{
+            'error': name.invalid && name.dirty,
+            'success': name.valid && name.dirty
+          }">
+        <div class="error-title" *ngIf="name.invalid && name.dirty">
+          Обязательное поле
+        </div>
+      </div>
+      <div class="control-wrap">
+        <input type="tel" formControlName="tel" class="form-imput" required placeholder="номер телефона" [ngClass]="{
+          'error': tel.invalid && tel.dirty,
+          'success': tel.valid && tel.dirty
+        }">
+        <div class="error-title" *ngIf="tel.errors && (tel.dirty || tel.touched)">
+          <span *ngIf="!!tel.errors.required">Обязательное поле</span>
+          <span *ngIf="!!tel.errors.pattern">Не верный формат телефона</span>
+        </div>
+      </div>
+      <button type="submit" class="form-btn" [ngClass]="{
+        'success-btn': registrationForm.valid
+      }">отправить</button>
+    </form>
+
+  </div>
+</ng-template>

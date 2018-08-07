@@ -1,0 +1,128 @@
+/* cell fead back start */
+
+.btn-call {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  width: 150px;
+  height: 170px;
+  border-right: 3px;
+  transition: all .3s;
+}
+
+.btn-call:hover {
+  background-color: rgb(212, 211, 211);
+}
+
+.btn-call:hover .btn-call-title {
+  display: inline-table;
+}
+
+.btn-call-title {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #39b54a;
+  display: none;
+  padding: 10px 0;
+  position: relative;
+}
+
+.btn-closed::before,
+.btn-closed::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  top: 0;
+  right: 0;
+  background-color: #39b54a;
+  cursor: pointer;
+}
+
+.btn-closed::before {
+  transform: rotate(45deg);
+}
+
+.btn-closed::after {
+  transform: rotate(-45deg);
+}
+
+.cell-img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+/* cell fead back end */
+
+/* modal fead back start */
+
+.modal-header .close.pull-right {
+  font-size: 1.5rem;
+}
+.modal-header .close.pull-right span {
+  top: 5px;
+  left: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.control-wrap {
+  margin-bottom: 20px;
+}
+.form-imput {
+  width: 300px;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 15px 25px;
+  text-align: center;
+  transition: all .3s;
+}
+.form-imput:focus.form-imput::placeholder {
+  color: transparent;
+}
+.form-btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 300px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s;
+}
+.form-btn:hover {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.error {
+  border-color: #EC7063;
+}
+.error-title {
+  color: #EC7063;
+  margin: 5px 0;
+}
+.success {
+  border-color: #52BE80;
+}
+.success-btn {
+  background-color: #52BE80;
+  color: #fff;
+}
+
+/* modal fead back end */

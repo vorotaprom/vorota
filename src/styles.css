@@ -213,6 +213,17 @@ h1 {
 
 /* gallery start */
 
+.modal-backdrop.fade.in.show{
+  opacity: .94;
+}
+.modal-dialog {
+  margin: 7.75rem auto 0;
+}
+@media (max-height: 700px) {
+  .modal-dialog  {
+    margin-top: 1.75rem;
+  }
+}
 .modal-content {
   background: transparent;
   border: none;
