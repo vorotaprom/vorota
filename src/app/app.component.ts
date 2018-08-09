@@ -33,7 +33,7 @@ export class AppComponent {
     }
   }
   public onResize(event) {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 991) {
       this.afterLine = false;
       this.mainLine = false;
       this.beforeLine = false;

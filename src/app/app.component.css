@@ -15,6 +15,20 @@
   color: #fff;
   text-transform: none;
 }
+.header__phone {
+  margin-left: 20px;
+  position: relative;
+}
+.header__phone i {
+  position: absolute;
+  width: 13px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -25px;
+  background: url('../assets/img/icon/phone.png') no-repeat center;
+
+}
 .drop-menu {
   opacity: 0;
   height: 0;

@@ -4,7 +4,8 @@
       <a href="#" routerLink="/home">
         <h1 class="header__logo">VorotaPROM</h1>
       </a>
-      <nav class="d-md-block d-none">
+      <span class="header__phone d-none d-sm-block"><i></i>098-17-175-28, 098-17-175-38</span>
+      <nav class="d-lg-block d-none">
         <ul class="header__items">
           <li class="header__item">
             <a class="header__item-link" href="#" routerLink="/home" routerLinkActive="active">Главная</a>
@@ -20,7 +21,7 @@
           </li>
         </ul>
       </nav>
-      <button class="btn-drop-menu d-md-none d-block" (click)="showMenu()">
+      <button class="btn-drop-menu d-lg-none d-block" (click)="showMenu()">
         <span class="after-line" [class.after-line-show]="afterLine"></span>
         <span class="main-line" [class.main-line-show]="mainLine"></span>
         <span class="before-line" [class.before-line-show]="beforeLine"></span>
