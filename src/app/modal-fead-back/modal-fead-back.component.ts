@@ -3,6 +3,8 @@ import { FormGroup, FormControl, Validators } from '../../../node_modules/@angul
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
+import { FeadBackService } from '../shared/queries/fead-back.service';
+
 
 @Component({
   selector: 'app-modal-fead-back',
@@ -13,6 +15,7 @@ export class ModalFeadBackComponent implements OnInit {
 
   public modalRef: BsModalRef;
   public displayCall = false;
+  public formHide = true;
 
   public registrationForm: FormGroup;
   public name: FormControl;
@@ -20,7 +23,9 @@ export class ModalFeadBackComponent implements OnInit {
 
   constructor(
     @Inject(forwardRef(() => BsModalService))
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    @Inject(forwardRef(() => FeadBackService))
+    private feadBackService: FeadBackService
   ) { }
 
   ngOnInit() {
@@ -48,7 +53,18 @@ export class ModalFeadBackComponent implements OnInit {
   }
   onSubmit() {
     if (this.registrationForm.valid) {
-      console.log(this.registrationForm.value);
+      this.feadBackService.sendFeadBack(this.registrationForm.value).subscribe(
+        response => {
+          if (response.status === 200) {
+            this.displayCall = false;
+            this.formHide = false;
+
+            setTimeout(() => {
+              this.modalRef.hide();
+            }, 3000);
+          }
+        }
+      );
     }
   }
 

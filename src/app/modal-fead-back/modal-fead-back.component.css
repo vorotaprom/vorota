@@ -125,4 +125,12 @@
   color: #fff;
 }
 
+.show-after-send-form {
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  padding: 0 15px;
+  color: #fff;
+}
+
 /* modal fead back end */

@@ -11,7 +11,7 @@
     </button>
   </div>
   <div class="modal-body">
-    <form class="form" novalidate [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <form class="form" novalidate [formGroup]="registrationForm" (ngSubmit)="onSubmit()" *ngIf="formHide">
       <div class="control-wrap">
         <input type="text" formControlName="name" class="form-imput" required placeholder="ваше имя" [ngClass]="{
             'error': name.invalid && name.dirty,
@@ -35,6 +35,8 @@
         'success-btn': registrationForm.valid
       }">отправить</button>
     </form>
-
+    <p class="show-after-send-form" *ngIf="!formHide">
+      Успешно отправлено, мы свяжемся с Вами в ближайшее время
+    </p>
   </div>
 </ng-template>

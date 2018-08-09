@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -22,6 +23,7 @@ import { TransshipmentService } from './shared/transshipment/transshipment.servi
 import { RampAndTableService } from './shared/ramp-and-table/ramp-and-table.service';
 import { CaruselService } from './shared/carusel/carusel.service';
 import { GalleryService } from './shared/gallery/gallery.service';
+import { FeadBackService } from './shared/queries/fead-back.service';
 
 import { SectionsModule } from './catalog/sections/sections.module';
 import { AntiFireModule } from './catalog/anti-fire/anti-fire.module';
@@ -56,6 +58,7 @@ import { ModalFeadBackComponent } from './modal-fead-back/modal-fead-back.compon
   imports: [
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
+    HttpModule,
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
@@ -88,6 +91,7 @@ import { ModalFeadBackComponent } from './modal-fead-back/modal-fead-back.compon
     RampAndTableService,
     CaruselService,
     GalleryService,
+    FeadBackService,
   ],
   bootstrap: [AppComponent]
 })
