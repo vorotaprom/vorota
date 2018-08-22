@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { CarouselModule, ModalModule } from 'ngx-bootstrap';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
@@ -44,6 +45,10 @@ import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CaruselComponent } from './home/carusel/carusel.component';
 import { ModalFeadBackComponent } from './modal-fead-back/modal-fead-back.component';
+import { PaymentComponent } from './payment/payment.component';
+import { HomeCotalogComponent } from './home/home-cotalog/home-cotalog.component';
+import { SliderAdvantagesComponent } from './home/slider-advantages/slider-advantages.component';
+
 
 
 @NgModule({
@@ -54,10 +59,14 @@ import { ModalFeadBackComponent } from './modal-fead-back/modal-fead-back.compon
     GalleryComponent,
     CaruselComponent,
     ModalFeadBackComponent,
+    PaymentComponent,
+    HomeCotalogComponent,
+    SliderAdvantagesComponent,
   ],
   imports: [
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
+    MDBBootstrapModule.forRoot(),
     HttpModule,
     FormsModule,
     CommonModule,
@@ -93,6 +102,7 @@ import { ModalFeadBackComponent } from './modal-fead-back/modal-fead-back.compon
     GalleryService,
     FeadBackService,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

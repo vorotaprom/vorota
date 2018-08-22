@@ -14,4 +14,7 @@ export class FeadBackService {
   sendFeadBack(feadBack) {
     return this.http.post(this.url, feadBack);
   }
+  sendOrder(order) {
+    return this.http.post(this.url, order);
+  }
 }

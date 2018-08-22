@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, forwardRef } from '@angular/core';
+import { Component, OnInit, Inject, forwardRef, ViewChild } from '@angular/core';
 
 import { Size, Construction } from '../../../shared/catalog/idex';
 import { CharacteristicSize, Constructions } from './characteristics';
@@ -10,7 +10,10 @@ import { ColorPanelRal } from '../../../shared/sections/color-panel-ral';
 import { FacingPremium } from '../../../shared/sections/facing-premium';
 import { AcsessuarSections } from '../../../shared/sections/acsessuar-sections';
 
+import { MadalFormOrderTorsionalComponent } from './madal-form-order-torsional/madal-form-order-torsional.component';
+
 import { SectionsService } from '../../../shared/sections/sections.service';
+import { PriceRsd02 } from '../../../shared/sections/price-rsd-02';
 
 @Component({
   selector: 'app-torsional',
@@ -26,15 +29,22 @@ export class TorsionalComponent implements OnInit {
   public facingPanels: FacingPremium[];
   public acsessuars: AcsessuarSections[];
 
+  public priceRsd02: PriceRsd02[];
+
   public constructions: Construction[];
   public size: Size[];
 
+  @ViewChild(MadalFormOrderTorsionalComponent)
+  madalFormOrderTorsional: MadalFormOrderTorsionalComponent;
+
   constructor(
     @Inject(forwardRef(() => SectionsService))
-    public sectionsService: SectionsService
+    public sectionsService: SectionsService,
   ) {}
 
   ngOnInit() {
+    this.sectionsService.getPriceRsd02().then(result => this.priceRsd02 = result);
+
     this.viewsPanels = this.sectionsService.getViewsPanels([
       'gofr',
       'wave',
@@ -97,5 +107,9 @@ export class TorsionalComponent implements OnInit {
 
     this.constructions = Constructions;
     this.size = CharacteristicSize;
+  }
+
+  showModalOrder(title) {
+    this.madalFormOrderTorsional.openModal(title);
   }
 }

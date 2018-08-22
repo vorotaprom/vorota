@@ -7,6 +7,103 @@ import { ColorPanelRal } from './color-panel-ral';
 import { FacingPremium } from './facing-premium';
 import { AcsessuarSections } from './acsessuar-sections';
 
+import { PriceRsd02 } from './price-rsd-02';
+
+const priceRsd02 = [
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 2500 х 2000',
+    '500'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 2500 х 2500',
+    '520'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 2500 х 3000',
+    '650'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 3000 х 2000',
+    '540'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 2500 х 2500',
+    '580'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 3000 х 3000',
+    '690'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 3500 х 2000',
+    '600'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 3500 х 2500',
+    '640'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 3500 х 3000',
+    '760'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 4000 х 2000',
+    '640'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 4000 х 2500',
+    '800'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 4000 х 3000',
+    '850'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 4500 х 2000',
+    '690'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 4500 х 2500',
+    '800'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 4500 х 3000',
+    '940'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 5000 х 2000',
+    '790'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 5000 х 2500',
+    '890'
+  ),
+  new PriceRsd02(
+    '../../../assets/img/catalog/section/img-price-rsd-02.png',
+    'Гаражные секционные ворота RSD02 5000 х 3000',
+    '1090'
+  ),
+];
+
+const priceRsd02Promise = Promise.resolve(priceRsd02);
+
 @Injectable()
 export class SectionsService {
 
@@ -181,6 +278,10 @@ export class SectionsService {
       + 'Минимальная высота щита — 2 130 мм.'
     )
   };
+
+  getPriceRsd02(): Promise<PriceRsd02[]> {
+    return priceRsd02Promise;
+  }
 
   getViewsPanels(index): ViewPanel[] {
     const obj: ViewPanel[] = [];

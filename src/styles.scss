@@ -1,16 +1,14 @@
 @import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
 @import url("./css/reset.css");
 @import url("./css/normalize.css");
-
 @import url("../node_modules/wowjs/css/libs/animate.css");
-
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext");
-
 html,
 body {
   width: 100%;
   height: 100%;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -18,18 +16,20 @@ body {
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   color: #3b3b3b;
-  background-color: #f3f3f3;
 }
+
 a,
 a:link,
 a:visited {
   color: #3b3b3b;
   text-decoration: none;
 }
+
 a:hover {
   color: #545ad8;
   text-decoration: none;
 }
+
 h1 {
   margin-top: 0pt;
   margin-bottom: 0pt;
@@ -37,37 +37,60 @@ h1 {
   padding-right: 0pt;
   text-transform: uppercase;
 }
+
 .modal-dialog {
   max-width: fit-content !important;
 }
+
 /* Delete ad hosting */
+
 .cbalink {
   display: none;
 }
+
 .wow {
   visibility: visible !important;
 }
+
 /* Styles for catalog start */
+
 .title {
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 30px;
   line-height: 36px;
+  position: relative;
 }
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #6cc46c;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .catalog {
   padding: 0 15px;
   margin-bottom: 70px;
 }
+
 .catalog__items {
   padding: 5px;
   cursor: pointer;
 }
+
 .catalog__item {
   width: 100%;
   position: relative;
 }
+
 .catalog__item-title {
   position: absolute;
   width: 100%;
@@ -79,6 +102,7 @@ h1 {
   color: #fff;
   text-transform: uppercase;
 }
+
 .catalog__item:hover .catalog__item-title {
   height: 100%;
   padding-top: 15%;
@@ -87,12 +111,15 @@ h1 {
   font-size: 26px;
   transition: all 0.6s;
 }
+
 .catalog__item-img {
   width: 100%;
 }
+
 /* Styles for catalog end */
 
 /* Style for catalog sections gate start */
+
 .title__after::after {
   content: "";
   position: absolute;
@@ -102,6 +129,7 @@ h1 {
   bottom: -20px;
   left: 0;
 }
+
 .product__title,
 .characteristics__title,
 .constuction__title,
@@ -110,38 +138,45 @@ h1 {
   position: relative;
   margin-bottom: 50px;
 }
+
 .product__title {
   font-size: 28px;
 }
+
 .characteristics__title,
 .constuction__title,
 .design__title,
 .acsessuars__title {
   font-size: 24px;
 }
+
 .design__caption,
 .acsessuars_caption {
   font-size: 20px;
   margin-bottom: 25px;
 }
+
 .product__description,
 .design__view-panel,
 .design__type-panel,
 .design__facing-premium {
   margin-bottom: 25px;
 }
+
 .product__img,
 .constuction__img {
   width: 100%;
   height: 100%;
   margin-bottom: 70px;
 }
+
 .table,
 .constuction__description,
 .design,
 .acsessuars {
   margin-bottom: 70px;
 }
+
 .design__view-panel,
 .design__type-panel,
 .design__color-wood-panel,
@@ -151,11 +186,13 @@ h1 {
   padding-right: 15px;
   text-align: center;
 }
+
 .design__view-panel__item,
 .design__color-wood-panel__item {
   width: 275px;
   margin-bottom: 15px;
 }
+
 .design__view-panel__item-img,
 .design__type-panel__item-img,
 .design__color-wood-panel__item-img,
@@ -163,20 +200,55 @@ h1 {
 .design__facing-premium__item-img {
   margin-bottom: 15px;
 }
+
 .design__type-panel__item,
-.design__facing-premium__item {
+.design__facing-premium__item,
+.prise-item {
   width: 260px;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   margin-right: 15px;
+}
+
+.prise-item-img {
+  margin-bottom: 15px;
+}
+
+.prise-item-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.prise-item-currency {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(108, 196, 108);
+}
+
+.prise-item-btn {
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid #525151;
+  outline: none;
+  background: #fff;
+  color: #4a4848;
+  text-transform: uppercase;
+  padding: 7px 15px;
+  transition: all .3s;
+  &:hover {
+    color: #fff;
+    background: #525151;
+  }
 }
 .design__color-ral-panel__item {
   margin-bottom: 15px;
 }
+
 .design__color-ral-panel__item-img {
   width: 260px;
   height: 150px;
   margin-right: 15px;
 }
+
 .design__color-ral-panel__item-description {
   width: 260px;
 }
@@ -184,57 +256,69 @@ h1 {
 .acsessuars__item {
   margin-bottom: 30px;
 }
+
 .acsessuars__item-img {
   width: 100%;
   height: 100%;
   margin-bottom: 15px;
 }
+
 @media (max-width: 1199px) {
   .design__caption {
     text-align: center;
   }
 }
+
 /* Style for catalog sections gate end */
 
 /* Style for catalog street gate start */
+
 .design__variant {
   padding-left: 15px;
   padding-right: 15px;
   text-align: center;
 }
+
 .design__variant__item {
   width: 260px;
   margin-bottom: 15px;
   margin-right: 15px;
 }
+
 .design__variant__item-img {
   margin-bottom: 15px;
 }
+
 /* Style for catalog street gate end */
 
 /* gallery start */
 
-.modal-backdrop.fade.in.show{
+.modal-backdrop.fade.in.show {
   opacity: .94;
 }
+
 .modal-dialog {
   margin: 7.75rem auto 0;
 }
+
 @media (max-height: 700px) {
-  .modal-dialog  {
+  .modal-dialog {
     margin-top: 1.75rem;
   }
 }
+
 .modal-content {
   background: transparent;
   border: none;
   border-radius: none;
 }
+
 .modal-header {
   border-bottom: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
 .close.pull-right {
   position: relative;
   outline: none;
@@ -243,10 +327,12 @@ h1 {
   color: #fff;
   z-index: 9998;
 }
+
 .close span {
   position: absolute;
   z-index: 9999;
   top: 10px;
   left: -10px;
 }
+
 /* gallery end */

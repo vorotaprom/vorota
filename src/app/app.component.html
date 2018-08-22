@@ -4,7 +4,7 @@
       <a href="#" routerLink="/home">
         <h1 class="header__logo">VorotaPROM</h1>
       </a>
-      <span class="header__phone d-none d-sm-block"><i></i>098-17-175-28, 098-17-175-38</span>
+      <span class="header__phone d-none d-sm-block"><i></i>098-17-175-38 <br> 067-230-01-45</span>
       <nav class="d-lg-block d-none">
         <ul class="header__items">
           <li class="header__item">
@@ -12,6 +12,9 @@
           </li>
           <li class="header__item">
             <a class="header__item-link" href="#" routerLink="/catalog" routerLinkActive="active">Каталог</a>
+          </li>
+          <li class="header__item">
+            <a class="header__item-link" href="#" routerLink="/payment" routerLinkActive="active">Оплата и Доставка</a>
           </li>
           <li class="header__item">
             <a class="header__item-link" href="#" routerLink="/gallery" routerLinkActive="active">Галерея</a>
@@ -27,14 +30,17 @@
         <span class="before-line" [class.before-line-show]="beforeLine"></span>
       </button>
     </header>
-    <div class="container drop-menu" [class.drop-menu-show]="dropMenuShow">
-      <nav>
+    <div class="container drop-menu d-none" [class.drop-menu-show]="dropMenuShow">
+      <nav class="">
         <ul>
           <li class="drop-menu__item">
             <a class="drop-menu__item-link" href="#" routerLink="/home" routerLinkActive="active" (click)="showMenu()">Главная</a>
           </li>
           <li class="drop-menu__item">
             <a class="drop-menu__item-link" href="#" routerLink="/catalog" routerLinkActive="active" (click)="showMenu()">Каталог</a>
+          </li>
+          <li class="drop-menu__item">
+            <a class="drop-menu__item-link" href="#" routerLink="/payment" routerLinkActive="active" (click)="showMenu()">Оплата и Доставка</a>
           </li>
           <li class="drop-menu__item">
             <a class="drop-menu__item-link" href="#" routerLink="/gallery" routerLinkActive="active" (click)="showMenu()">Галерея</a>

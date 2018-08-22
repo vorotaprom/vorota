@@ -2,6 +2,14 @@
   <!-- Product main start -->
   <div class="product">
     <h2 class="product__title title__after">С торсионным механизмом</h2>
+    <div class="row justify-content-center">
+      <div class="prise-item" *ngFor="let item of priceRsd02">
+        <img class="prise-item-img" src="{{ item.img }}" alt="item.title">
+        <h4 class="prise-item-title">{{ item.title }}</h4>
+        <div class="prise-item-currency">{{ item.price }}&euro;</div>
+        <button class="prise-item-btn" (click)="showModalOrder(item.title)">заказать</button>
+      </div>
+    </div>
     <p class="product__description">
       Гаражные ворота серии RSD02 рассчитаны на установку в проемы как небольших, так и средних размеров. Они могут быть установлены
       в помещения с притолокой от 150 мм и боковыми расстояниями (от края проема до стены) от 120 мм. Специально разработанная
@@ -114,3 +122,4 @@
   </div>
   <!-- Constructuin end -->
 </div>
+<app-madal-form-order-torsional></app-madal-form-order-torsional>

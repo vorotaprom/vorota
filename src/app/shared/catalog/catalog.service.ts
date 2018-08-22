@@ -67,7 +67,7 @@ const catalogRolletAluminium = [
   new Catalog(7, 'Профиль RHE84G, RHE84GM', '../../assets/img/catalog/rollet/aluminium/rhe-84.jpg', 'rhe-84'),
 ];
 const catalogSections = [
-  new Catalog(1, 'С пружинами растяжения стандартных размеров', 'assets/img/catalog/section/standart.jpg', 'standart'),
+  // new Catalog(1, 'С пружинами растяжения стандартных размеров', 'assets/img/catalog/section/standart.jpg', 'standart'),
   new Catalog(2, 'С пружинами растяжения', 'assets/img/catalog/section/stretching.jpg', 'stretching'),
   new Catalog(3, 'С торсионным механизмом', 'assets/img/catalog/section/torsional.jpg', 'torsional'),
   new Catalog(4, 'Промышленые', 'assets/img/catalog/section/industrial.jpg', 'industrial'),

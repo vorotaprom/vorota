@@ -10,6 +10,10 @@ const gallery: Photo[] = [
   new Photo('assets/img/gallery/05.jpg', null),
   new Photo('assets/img/gallery/06.jpg', null),
   new Photo('assets/img/gallery/07.jpg', null),
+  new Photo('assets/img/gallery/08.jpg', null),
+  new Photo('assets/img/gallery/09.jpg', null),
+  new Photo('assets/img/gallery/10.jpg', null),
+  new Photo('assets/img/gallery/11.jpg', null),
 ];
 
 const galleryPromise = Promise.resolve(gallery);
