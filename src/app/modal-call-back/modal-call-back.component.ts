@@ -1,17 +1,16 @@
 import { Component, OnInit, TemplateRef, Inject, forwardRef } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '../../../node_modules/@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 import { FeadBackService } from '../shared/queries/fead-back.service';
 
-
 @Component({
-  selector: 'app-modal-fead-back',
-  templateUrl: './modal-fead-back.component.html',
-  styleUrls: ['./modal-fead-back.component.css']
+  selector: 'app-modal-call-back',
+  templateUrl: './modal-call-back.component.html',
+  styleUrls: ['./modal-call-back.component.css']
 })
-export class ModalFeadBackComponent implements OnInit {
+export class ModalCallBackComponent implements OnInit {
 
   public modalRef: BsModalRef;
   public displayCall = false;
@@ -53,7 +52,7 @@ export class ModalFeadBackComponent implements OnInit {
   }
   onSubmit() {
     if (this.registrationForm.valid) {
-      this.feadBackService.sendFeadBack(this.registrationForm.value).subscribe(
+      this.feadBackService.sendCallBack(this.registrationForm.value).subscribe(
         response => {
           if (response.status === 200) {
             this.displayCall = false;

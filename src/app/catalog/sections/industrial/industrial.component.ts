@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, forwardRef } from '@angular/core';
+import { Component, OnInit, Inject, forwardRef, ViewChild } from '@angular/core';
 
 import { Size, Construction } from '../../../shared/catalog/idex';
 import { CharacteristicSize, Constructions } from './characteristics';
@@ -9,7 +9,10 @@ import { ColorPanelWood } from '../../../shared/sections/color-panel-wood';
 import { ColorPanelRal } from '../../../shared/sections/color-panel-ral';
 import { AcsessuarSections } from '../../../shared/sections/acsessuar-sections';
 
+import { MadalFormOrderIndustrialComponent } from './madal-form-order-industrial/madal-form-order-industrial.component';
+
 import { SectionsService } from '../../../shared/sections/sections.service';
+import { ModelPriceSection } from '../../../shared/sections/model-price-section';
 
 @Component({
   selector: 'app-industrial',
@@ -24,8 +27,13 @@ export class IndustrialComponent implements OnInit {
   public colorsPanelsRal: ColorPanelRal[];
   public acsessuars: AcsessuarSections[];
 
+  public priceIsd01: ModelPriceSection[];
+
   public constructions: Construction[];
   public size: Size[];
+
+  @ViewChild(MadalFormOrderIndustrialComponent)
+  madalFormOrderIndustrial: MadalFormOrderIndustrialComponent;
 
   constructor(
     @Inject(forwardRef(() => SectionsService))
@@ -33,6 +41,8 @@ export class IndustrialComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.sectionsService.getPriceIsd01().then(result => this.priceIsd01 = result);
+
     this.viewsPanels = this.sectionsService.getViewsPanels([
       'gofr',
       'wave',
@@ -74,5 +84,9 @@ export class IndustrialComponent implements OnInit {
 
     this.constructions = Constructions;
     this.size = CharacteristicSize;
+  }
+
+  showModalOrder(title) {
+    this.madalFormOrderIndustrial.openModal(title);
   }
 }

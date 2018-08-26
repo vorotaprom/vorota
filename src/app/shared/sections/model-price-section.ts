@@ -1,4 +1,4 @@
-export class PriceRsd02 {
+export class ModelPriceSection {
   constructor(
     public img: string,
     public title: string,

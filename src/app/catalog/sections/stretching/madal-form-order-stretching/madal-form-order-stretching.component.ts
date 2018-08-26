@@ -6,11 +6,11 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { FeadBackService } from '../../../../shared/queries/fead-back.service';
 
 @Component({
-  selector: 'app-madal-form-order-torsional',
-  templateUrl: './madal-form-order-torsional.component.html',
-  styleUrls: ['./madal-form-order-torsional.component.scss']
+  selector: 'app-madal-form-order-stretching',
+  templateUrl: './madal-form-order-stretching.component.html',
+  styleUrls: ['./madal-form-order-stretching.component.scss']
 })
-export class MadalFormOrderTorsionalComponent implements OnInit {
+export class MadalFormOrderStretchingComponent implements OnInit {
 
   public modalRef: BsModalRef;
   public formHide = true;
@@ -78,4 +78,5 @@ export class MadalFormOrderTorsionalComponent implements OnInit {
       );
     }
   }
+
 }

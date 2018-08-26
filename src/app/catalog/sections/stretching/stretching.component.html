@@ -2,6 +2,14 @@
   <!-- Product main start -->
   <div class="product">
     <h2 class="product__title title__after">С пружинами растяжения</h2>
+    <div class="row justify-content-center">
+      <div class="prise-item" *ngFor="let item of priceRsd01">
+        <img class="prise-item-img" src="{{ item.img }}" alt="item.title">
+        <h4 class="prise-item-title">{{ item.title }}</h4>
+        <div class="prise-item-currency">{{ item.price }}&euro;</div>
+        <button class="prise-item-btn" (click)="showModalOrder(item.title)">заказать</button>
+      </div>
+    </div>
     <p class="product__description">
       Гаражные секционные ворота с пружинами растяжения предназначены для перекрытия въездных проемов небольших размеров
       <br> (шириной от 2 000 до 3 100 мм, высотой от 1 800 до 3 000 мм) в гаражных и технических помещениях. Конструкция на базе
@@ -102,3 +110,4 @@
   </div>
   <!-- Constructuin end -->
 </div>
+<app-madal-form-order-stretching></app-madal-form-order-stretching>

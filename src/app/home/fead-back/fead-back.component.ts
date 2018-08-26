@@ -1,14 +1,14 @@
-import { Component, OnInit, Inject, forwardRef} from '@angular/core';
+import { Component, OnInit, Inject, forwardRef } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { FeadBackService } from '../shared/queries/fead-back.service';
+import { FeadBackService } from '../../shared/queries/fead-back.service';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  selector: 'app-fead-back',
+  templateUrl: './fead-back.component.html',
+  styleUrls: ['./fead-back.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class FeadBackComponent implements OnInit {
 
   public feadBackForm: FormGroup;
   public name: FormControl;
@@ -40,6 +40,7 @@ export class ContactComponent implements OnInit {
     ]);
     this.message = new FormControl('', Validators.required);
   }
+
   CreateForm() {
     this.feadBackForm = new FormGroup({
       name: this.name,

@@ -11,10 +11,13 @@ export class FeadBackService {
     private http: Http
   ) {}
 
-  sendFeadBack(feadBack) {
-    return this.http.post(this.url, feadBack);
+  sendCallBack(callBack) {
+    return this.http.post(this.url, callBack);
   }
   sendOrder(order) {
     return this.http.post(this.url, order);
+  }
+  sendFeadBack(featBack) {
+    return this.http.post(this.url, featBack);
   }
 }

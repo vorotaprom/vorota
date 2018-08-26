@@ -44,10 +44,12 @@ import { AluminiumModule } from './catalog/rollet/aluminium/aluminium.module';
 import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CaruselComponent } from './home/carusel/carusel.component';
-import { ModalFeadBackComponent } from './modal-fead-back/modal-fead-back.component';
+import { ModalCallBackComponent } from './modal-call-back/modal-call-back.component';
 import { PaymentComponent } from './payment/payment.component';
 import { HomeCotalogComponent } from './home/home-cotalog/home-cotalog.component';
 import { SliderAdvantagesComponent } from './home/slider-advantages/slider-advantages.component';
+import { FeadBackComponent } from './home/fead-back/fead-back.component';
+import { MapComponent } from './home/map/map.component';
 
 
 
@@ -58,10 +60,12 @@ import { SliderAdvantagesComponent } from './home/slider-advantages/slider-advan
     HomeComponent,
     GalleryComponent,
     CaruselComponent,
-    ModalFeadBackComponent,
+    ModalCallBackComponent,
     PaymentComponent,
     HomeCotalogComponent,
     SliderAdvantagesComponent,
+    FeadBackComponent,
+    MapComponent,
   ],
   imports: [
     CarouselModule.forRoot(),

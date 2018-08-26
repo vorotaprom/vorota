@@ -12,7 +12,6 @@ import { AcsessuarSections } from '../../../shared/sections/acsessuar-sections';
 
 import { SectionsService } from '../../../shared/sections/sections.service';
 
-
 @Component({
   selector: 'app-standart',
   templateUrl: './standart.component.html',
@@ -25,6 +24,7 @@ export class StandartComponent implements OnInit {
   public colorsPanelsWood: ColorPanelWood[];
   public colorsPanelsRal: ColorPanelRal[];
   public acsessuars: AcsessuarSections[];
+
   public constructions: Construction[];
   public size: Size[];
 

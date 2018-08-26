@@ -1,0 +1,40 @@
+<ng-template #template>
+  <div class="modal-header">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form class="form" novalidate [formGroup]="registrationForm" (ngSubmit)="onSubmit()" *ngIf="formHide">
+      <div class="control-wrap">
+        <input type="text" formControlName="name" class="form-imput" required placeholder="ваше имя" [ngClass]="{
+            'error': name.invalid && name.dirty,
+            'success': name.valid && name.dirty
+          }">
+        <div class="error-title" *ngIf="name.invalid && name.dirty">
+          Обязательное поле
+        </div>
+      </div>
+      <div class="control-wrap">
+        <input type="tel" formControlName="tel" class="form-imput" required placeholder="номер телефона" [ngClass]="{
+          'error': tel.invalid && tel.dirty,
+          'success': tel.valid && tel.dirty
+        }">
+        <div class="error-title" *ngIf="tel.errors && (tel.dirty || tel.touched)">
+          <span *ngIf="!!tel.errors.required">Обязательное поле</span>
+          <span *ngIf="!!tel.errors.pattern">Не верный формат телефона</span>
+        </div>
+      </div>
+      <div class="control-wrap">
+        <textarea formControlName="message" class="form-textarea" placeholder="ваше сообщение"></textarea>
+      </div>
+      <button type="submit" class="form-btn" [ngClass]="{
+        'success-btn': registrationForm.valid
+      }">отправить</button>
+    </form>
+    <p class="show-after-send-form" *ngIf="!formHide">
+      Ваш заказ успешно отправлен, мы свяжемся с Вами в ближайшее время
+    </p>
+  </div>
+</ng-template>
+

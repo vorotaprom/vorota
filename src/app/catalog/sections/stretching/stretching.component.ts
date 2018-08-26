@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, forwardRef } from '@angular/core';
+import { Component, OnInit, Inject, forwardRef, ViewChild } from '@angular/core';
 
 import { Size, Construction } from '../../../shared/catalog/idex';
 import { CharacteristicSize, Constructions } from './characteristics';
@@ -9,8 +9,10 @@ import { ColorPanelWood } from '../../../shared/sections/color-panel-wood';
 import { ColorPanelRal } from '../../../shared/sections/color-panel-ral';
 import { AcsessuarSections } from '../../../shared/sections/acsessuar-sections';
 
-import { SectionsService } from '../../../shared/sections/sections.service';
+import { MadalFormOrderStretchingComponent } from './madal-form-order-stretching/madal-form-order-stretching.component';
 
+import { SectionsService } from '../../../shared/sections/sections.service';
+import { ModelPriceSection } from '../../../shared/sections/model-price-section';
 
 @Component({
   selector: 'app-stretching',
@@ -25,8 +27,13 @@ export class StretchingComponent implements OnInit {
   public colorsPanelsRal: ColorPanelRal[];
   public acsessuars: AcsessuarSections[];
 
+  public priceRsd01: ModelPriceSection[];
+
   public constructions: Construction[];
   public size: Size[];
+
+  @ViewChild(MadalFormOrderStretchingComponent)
+  madalFormOrderStretching: MadalFormOrderStretchingComponent;
 
   constructor(
     @Inject(forwardRef(() => SectionsService))
@@ -34,6 +41,8 @@ export class StretchingComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.sectionsService.getPriceRsd01().then(result => this.priceRsd01 = result);
+
     this.viewsPanels = this.sectionsService.getViewsPanels([
       'gofr',
       'wave',
@@ -81,5 +90,9 @@ export class StretchingComponent implements OnInit {
 
     this.constructions = Constructions;
     this.size = CharacteristicSize;
+  }
+
+  showModalOrder(title) {
+    this.madalFormOrderStretching.openModal(title);
   }
 }

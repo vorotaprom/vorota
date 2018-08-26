@@ -14,7 +14,13 @@
   align-items: center;
   height: 230px;
 }
-
+.slide-img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+  pointer-events: none;
+}
 .slide-title-wrap {
   height: 80px;
   text-align: center;

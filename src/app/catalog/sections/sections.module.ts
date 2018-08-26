@@ -9,7 +9,10 @@ import { StretchingComponent } from './stretching/stretching.component';
 import { TorsionalComponent } from './torsional/torsional.component';
 import { IndustrialComponent } from './industrial/industrial.component';
 import { PanoramaComponent } from './panorama/panorama.component';
+import { MadalFormOrderStretchingComponent } from './stretching/madal-form-order-stretching/madal-form-order-stretching.component';
 import { MadalFormOrderTorsionalComponent } from './torsional/madal-form-order-torsional/madal-form-order-torsional.component';
+import { MadalFormOrderIndustrialComponent } from './industrial/madal-form-order-industrial/madal-form-order-industrial.component';
+
 
 @NgModule({
   imports: [
@@ -25,6 +28,9 @@ import { MadalFormOrderTorsionalComponent } from './torsional/madal-form-order-t
     TorsionalComponent,
     IndustrialComponent,
     PanoramaComponent,
-    MadalFormOrderTorsionalComponent]
+    MadalFormOrderStretchingComponent,
+    MadalFormOrderTorsionalComponent,
+    MadalFormOrderIndustrialComponent,
+  ]
 })
 export class SectionsModule { }

@@ -2,6 +2,14 @@
   <!-- Product main start -->
   <div class="product">
     <h2 class="product__title title__after">Промышленые</h2>
+    <div class="row justify-content-center">
+      <div class="prise-item" *ngFor="let item of priceIsd01">
+        <img class="prise-item-img" src="{{ item.img }}" alt="item.title">
+        <h4 class="prise-item-title">{{ item.title }}</h4>
+        <div class="prise-item-currency">{{ item.price }}&euro;</div>
+        <button class="prise-item-btn" (click)="showModalOrder(item.title)">заказать</button>
+      </div>
+    </div>
     <p class="product__description">
       Промышленные секционные ворота серии ISD01 устанавливаются в проемы производственных зданий, складских помещений, цехов,
       терминалов и прочих промышленных объектов, где они должны отвечать гораздо более жестким требованиям нежели гаражные
@@ -105,3 +113,4 @@
   </div>
   <!-- Constructuin end -->
 </div>
+<app-madal-form-order-industrial></app-madal-form-order-industrial>

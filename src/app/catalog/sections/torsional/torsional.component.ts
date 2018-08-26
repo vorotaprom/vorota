@@ -13,7 +13,7 @@ import { AcsessuarSections } from '../../../shared/sections/acsessuar-sections';
 import { MadalFormOrderTorsionalComponent } from './madal-form-order-torsional/madal-form-order-torsional.component';
 
 import { SectionsService } from '../../../shared/sections/sections.service';
-import { PriceRsd02 } from '../../../shared/sections/price-rsd-02';
+import { ModelPriceSection } from '../../../shared/sections/model-price-section';
 
 @Component({
   selector: 'app-torsional',
@@ -29,7 +29,7 @@ export class TorsionalComponent implements OnInit {
   public facingPanels: FacingPremium[];
   public acsessuars: AcsessuarSections[];
 
-  public priceRsd02: PriceRsd02[];
+  public priceRsd02: ModelPriceSection[];
 
   public constructions: Construction[];
   public size: Size[];
