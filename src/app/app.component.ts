@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { WINDOW } from '@ng-toolkit/universal';
+import { Component , Inject} from '@angular/core';
+import { MetaService } from 'ng2-meta';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +16,11 @@ export class AppComponent {
   public headerBg = false;
 
   public triger = true;
+ constructor(
+   @Inject(WINDOW) private window: Window,
+   private metaService: MetaService
+  ) {}
+
 
   public showMenu() {
     if (this.triger) {
@@ -33,7 +40,7 @@ export class AppComponent {
     }
   }
   public onResize(event) {
-    if (window.innerWidth >= 991) {
+    if (this.window.innerWidth >= 991) {
       this.afterLine = false;
       this.mainLine = false;
       this.beforeLine = false;

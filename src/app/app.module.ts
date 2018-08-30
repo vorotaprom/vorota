@@ -1,8 +1,10 @@
+import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
+import { MetaModule, MetaConfig } from 'ng2-meta';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -51,7 +53,14 @@ import { SliderAdvantagesComponent } from './home/slider-advantages/slider-advan
 import { FeadBackComponent } from './home/fead-back/fead-back.component';
 import { MapComponent } from './home/map/map.component';
 
-
+const metaConfig:  MetaConfig  = {
+  useTitleSuffix: false,
+  defaults: {
+    title: 'Ворота откатные, подъемные, распашные – купить в Киеве на VorotaPROM',
+    description: 'Покупайте ворота, калитки, шлагбаумы, подъемные столы, пленочные завесы на vorotaprom.com.ua ☏(098)17-17-538✓Оборудование для склада, дачи✓Доставка по Украине',
+    keywords: 'ворота, калитка, купить ворота, купить калитку, автоматика для ворот, рольставни купить, шлагбаум, гаражные ворота, подъемный стол'
+  }
+};
 
 @NgModule({
   declarations: [
@@ -68,14 +77,16 @@ import { MapComponent } from './home/map/map.component';
     MapComponent,
   ],
   imports: [
+    CommonModule,
+    NgtUniversalModule,
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
     MDBBootstrapModule.forRoot(),
+    MetaModule.forRoot(metaConfig),
     HttpModule,
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    BrowserModule,
     AppRoutingModule,
     CatalogModule,
     SectionsModule,
@@ -106,7 +117,6 @@ import { MapComponent } from './home/map/map.component';
     GalleryService,
     FeadBackService,
   ],
-  bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

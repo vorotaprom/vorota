@@ -1,3 +1,4 @@
+import { WINDOW } from '@ng-toolkit/universal';
 import { Component, OnInit, Inject, forwardRef, ViewChild } from '@angular/core';
 
 import { Size, Construction } from '../../../shared/catalog/idex';
@@ -35,7 +36,7 @@ export class IndustrialComponent implements OnInit {
   @ViewChild(MadalFormOrderIndustrialComponent)
   madalFormOrderIndustrial: MadalFormOrderIndustrialComponent;
 
-  constructor(
+  constructor(@Inject(WINDOW) private window: Window, 
     @Inject(forwardRef(() => SectionsService))
     public sectionsService: SectionsService
   ) {}

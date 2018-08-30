@@ -1,7 +1,8 @@
+import { Inject } from '@angular/core';
+import { WINDOW } from '@ng-toolkit/universal';
 import {
   Component,
   OnInit,
-  Inject,
   forwardRef
 } from '@angular/core';
 
@@ -29,7 +30,7 @@ export class CaruselComponent implements OnInit {
   public wow: WOW;
   // private wowSubscription: Subscription;
 
-  constructor(
+  constructor(@Inject(WINDOW) private window: Window,
     @Inject(forwardRef(() => CaruselService))
     private caruselService: CaruselService,
   ) {

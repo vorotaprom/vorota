@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { WINDOW } from '@ng-toolkit/universal';
+import { Injectable, Inject } from '@angular/core';
 
 import { ViewPanel } from './view-panel';
 import { TypePanel } from './type-panel';
@@ -256,6 +257,8 @@ export class StreetService {
       'если выбран электромеханический замок, то ручка идет в комплекте с замком.'
     ),
   };
+ constructor(@Inject(WINDOW) private window: Window) {}
+
 
   getViewsPanels(index): ViewPanel[] {
     const obj: ViewPanel[] = [];

@@ -1,3 +1,4 @@
+import { WINDOW } from '@ng-toolkit/universal';
 import { Component, OnInit, Inject, forwardRef } from '@angular/core';
 
 import { Size, Construction } from '../../../shared/catalog/idex';
@@ -29,7 +30,7 @@ export class RecoilingComponent implements OnInit {
   public constructions: Construction[];
   public size: Size[];
 
-  constructor(
+  constructor(@Inject(WINDOW) private window: Window, 
     @Inject(forwardRef(() => StreetService))
     public streetService: StreetService
   ) {}

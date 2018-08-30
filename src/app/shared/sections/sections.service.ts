@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { WINDOW } from '@ng-toolkit/universal';
+import { Injectable, Inject } from '@angular/core';
 
 import { ViewPanel } from './view-panel';
 import { TypePanel } from './type-panel';
@@ -336,6 +337,11 @@ export class SectionsService {
       + 'Минимальная высота щита — 2 130 мм.'
     )
   };
+
+  constructor(
+     @Inject(WINDOW) private window: Window
+  ) {}
+
 
   getPriceRsd01(): Promise<ModelPriceSection[]> {
     return priceRsd01Promise;

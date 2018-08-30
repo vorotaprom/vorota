@@ -1,3 +1,4 @@
+import { WINDOW } from '@ng-toolkit/universal';
 import { Component, OnInit, Inject, forwardRef, ViewChild } from '@angular/core';
 
 import { Size, Construction } from '../../../shared/catalog/idex';
@@ -36,6 +37,7 @@ export class StretchingComponent implements OnInit {
   madalFormOrderStretching: MadalFormOrderStretchingComponent;
 
   constructor(
+    @Inject(WINDOW) private window: Window,
     @Inject(forwardRef(() => SectionsService))
     public sectionsService: SectionsService
   ) {}
