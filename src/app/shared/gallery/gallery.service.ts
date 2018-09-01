@@ -3,17 +3,18 @@ import { Injectable } from '@angular/core';
 import { Photo } from './photo';
 
 const gallery: Photo[] = [
-  new Photo('assets/img/gallery/01.jpg', null),
-  new Photo('assets/img/gallery/02.jpg', null),
-  new Photo('assets/img/gallery/03.jpg', null),
-  new Photo('assets/img/gallery/04.jpg', null),
-  new Photo('assets/img/gallery/05.jpg', null),
-  new Photo('assets/img/gallery/06.jpg', null),
-  new Photo('assets/img/gallery/07.jpg', null),
-  new Photo('assets/img/gallery/08.jpg', null),
-  new Photo('assets/img/gallery/09.jpg', null),
-  new Photo('assets/img/gallery/10.jpg', null),
-  new Photo('assets/img/gallery/11.jpg', null),
+  new Photo('assets/img/gallery/001.jpg', null),
+  new Photo('assets/img/gallery/002.jpg', null),
+  new Photo('assets/img/gallery/003.jpg', null),
+  new Photo('assets/img/gallery/004.jpg', null),
+  new Photo('assets/img/gallery/005.jpg', null),
+  new Photo('assets/img/gallery/006.jpg', null),
+  new Photo('assets/img/gallery/007.jpg', null),
+  new Photo('assets/img/gallery/008.jpg', null),
+  new Photo('assets/img/gallery/009.jpg', null),
+  new Photo('assets/img/gallery/010.jpg', null),
+  new Photo('assets/img/gallery/011.jpg', null),
+  new Photo('assets/img/gallery/012.jpg', null),
 ];
 
 const galleryPromise = Promise.resolve(gallery);

@@ -27,6 +27,7 @@ export class AluminiumComponent implements OnInit {
   }
   onSelect(selected: Catalog) {
     this.router.navigate([selected.rLink], { relativeTo: this.activatedRouter });
+    document.documentElement.scrollTop = 0;
   }
 
 }

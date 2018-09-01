@@ -5,20 +5,20 @@ import { MetaService } from 'ng2-meta';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   public afterLine = false;
   public mainLine = false;
   public beforeLine = false;
   public dropMenuShow = false;
-
   public headerBg = false;
-
   public triger = true;
- constructor(
-   @Inject(WINDOW) private window: Window,
-   private metaService: MetaService
+  public footerYear = Date.now();
+
+  constructor(
+    @Inject(WINDOW) private window: Window,
+    private metaService: MetaService
   ) {}
 
 
@@ -38,6 +38,7 @@ export class AppComponent {
       this.headerBg = false;
       this.triger = true;
     }
+    document.documentElement.scrollTop = 0;
   }
   public onResize(event) {
     if (this.window.innerWidth >= 991) {
@@ -58,6 +59,10 @@ export class AppComponent {
       this.headerBg = false;
 
       this.triger = true;
+  }
+
+  public onTop() {
+    document.documentElement.scrollTop = 0;
   }
 }
 

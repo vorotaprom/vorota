@@ -4,23 +4,23 @@
       <a href="#" routerLink="/home">
         <h1 class="header__logo">VorotaPROM</h1>
       </a>
-      <span class="header__phone d-none d-sm-block"><i></i>098-17-175-38 <br> 067-230-01-45</span>
+      <span class="header__phone d-none d-sm-block"><i></i>098-171-75-38 <br> 067-230-01-45</span>
       <nav class="d-lg-block d-none">
         <ul class="header__items">
           <li class="header__item">
-            <a class="header__item-link" href="#" routerLink="/home" routerLinkActive="active">Главная</a>
+            <a class="header__item-link" href="#" routerLink="/home" routerLinkActive="active" (click)="onTop()">Главная</a>
           </li>
           <li class="header__item">
-            <a class="header__item-link" href="#" routerLink="/catalog" routerLinkActive="active">Каталог</a>
+            <a class="header__item-link" href="#" routerLink="/catalog" routerLinkActive="active" (click)="onTop()">Каталог</a>
           </li>
           <li class="header__item">
-            <a class="header__item-link" href="#" routerLink="/payment" routerLinkActive="active">Оплата и Доставка</a>
+            <a class="header__item-link" href="#" routerLink="/payment" routerLinkActive="active" (click)="onTop()">Оплата и Доставка</a>
           </li>
           <li class="header__item">
-            <a class="header__item-link" href="#" routerLink="/gallery" routerLinkActive="active">Галерея</a>
+            <a class="header__item-link" href="#" routerLink="/gallery" routerLinkActive="active" (click)="onTop()">Галерея</a>
           </li>
           <li class="header__item">
-            <a class="header__item-link" href="#" routerLink="/contact" routerLinkActive="active">Контакты</a>
+            <a class="header__item-link" href="#" routerLink="/contact" routerLinkActive="active" (click)="onTop()">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -31,7 +31,7 @@
       </button>
     </header>
     <div class="container drop-menu d-none" [class.drop-menu-show]="dropMenuShow">
-      <nav class="">
+      <nav>
         <ul>
           <li class="drop-menu__item">
             <a class="drop-menu__item-link" href="#" routerLink="/home" routerLinkActive="active" (click)="showMenu()">Главная</a>
@@ -40,7 +40,8 @@
             <a class="drop-menu__item-link" href="#" routerLink="/catalog" routerLinkActive="active" (click)="showMenu()">Каталог</a>
           </li>
           <li class="drop-menu__item">
-            <a class="drop-menu__item-link" href="#" routerLink="/payment" routerLinkActive="active" (click)="showMenu()">Оплата и Доставка</a>
+            <a class="drop-menu__item-link" href="#" routerLink="/payment" routerLinkActive="active" (click)="showMenu()">Оплата
+              и Доставка</a>
           </li>
           <li class="drop-menu__item">
             <a class="drop-menu__item-link" href="#" routerLink="/gallery" routerLinkActive="active" (click)="showMenu()">Галерея</a>
@@ -52,15 +53,63 @@
       </nav>
     </div>
   </section>
+
   <section class="content" (click)="onClosedMenu()">
     <router-outlet></router-outlet>
   </section>
+
 </div>
-<div class="footer__bg">
-  <footer class="container footer" (click)="onClosedMenu()">
-    <p>VorotaPROM &copy; 2016-2018</p>
-  </footer>
-</div>
+
+<footer (click)="onClosedMenu()">
+  <div class="footer-top-bg">
+    <div class="container">
+      <div class="footer-top">
+        <div class="row footer-top-wrap">
+          <div class="col-md-4 footer-top-menu">
+            <ul>
+              <li class="footer-top-menu-item"><a class="footer-top-menu-link" routerLink="/catalog/section" href="#" (click)="onTop()">Секцилнные ворота</a></li>
+              <li class="footer-top-menu-item"><a class="footer-top-menu-link" routerLink="/catalog/street" href="#" (click)="onTop()">Уличные ворота</a></li>
+              <li class="footer-top-menu-item"><a class="footer-top-menu-link" routerLink="/catalog/anti-fire" href="#" (click)="onTop()">Противопожарные ворота</a></li>
+              <li class="footer-top-menu-item"><a class="footer-top-menu-link" routerLink="/catalog/avtomatica" href="#" (click)="onTop()">Автоматика</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-top-menu">
+            <ul>
+              <li class="footer-top-menu-item"><a class="footer-top-menu-link" routerLink="/catalog/barrier" href="#" (click)="onTop()">Шлагбаумы, цепные барьеры</a></li>
+              <li class="footer-top-menu-item"><a class="footer-top-menu-link" routerLink="/catalog/rollet" href="#" (click)="onTop()">Роьставни, рольворота</a></li>
+              <li class="footer-top-menu-item"><a class="footer-top-menu-link" routerLink="/catalog/speed-roll" href="#" (click)="onTop()">Скоростные ворота</a></li>
+              <li class="footer-top-menu-item"><a class="footer-top-menu-link" routerLink="/catalog/transshipment" href="#" (click)="onTop()">Перегрузочное оборудование</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-top-menu">
+            <ul>
+              <li class="footer-top-menu-item"><a class="footer-top-menu-link" routerLink="/catalog/ramp-and-table" href="#" (click)="onTop()">Рампы, столы подьемные</a></li>
+              <li class="footer-top-menu-item"><a class="footer-top-menu-link" routerLink="/payment" href="#" (click)="onTop()">Оплата и доставка</a></li>
+              <li class="footer-top-menu-item"><a class="footer-top-menu-link" routerLink="/gallery" href="#" (click)="onTop()">Галерея</a></li>
+              <li class="footer-top-menu-item"><a class="footer-top-menu-link" routerLink="/contact" href="#" (click)="onTop()">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col footer-top-info">
+            <a class="footer-top-info-mail" href="mailto: info@vorotaprom.com.ua">info@vorota.prom.com.ua</a>
+            <a class="footer-top-info-tel" href="tel: +380981717535">+38 098-171-75-38</a>
+            <a class="footer-top-info-tel" href="tel: +380672300145">+38 067-230-01-45</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom-bg">
+    <div class="container">
+      <div class="row align-items-center footer-bottom">
+        <p class="col" >VorotaPROM &copy; 2016-{{ footerYear | date : "y" }}</p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
 <!-- feadback start -->
 <app-modal-call-back></app-modal-call-back>
 <!-- feadback end -->
