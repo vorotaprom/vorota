@@ -13,32 +13,32 @@ import { ModelPriceSection } from './model-price-section';
 const priceRsd01 = [
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-01.png',
-    'Гаражные секционные ворота RSD01 2500 х 2000',
+    'Гаражные секционные ворота DoorHan RSD01 2500 х 2000',
     '450'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-01.png',
-    'Гаражные секционные ворота RSD01 2500 х 2500',
+    'Гаражные секционные ворота DoorHan RSD01 2500 х 2500',
     '490'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-01.png',
-    'Гаражные секционные ворота RSD01 2800 х 2300',
+    'Гаражные секционные ворота DoorHan RSD01 2800 х 2300',
     '480'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-01.png',
-    'Гаражные секционные ворота RSD01 2800 х 2500',
+    'Гаражные секционные ворота DoorHan RSD01 2800 х 2500',
     '530'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-01.png',
-    'Гаражные секционные ворота RSD01 3000 х 2000',
+    'Гаражные секционные ворота DoorHan RSD01 3000 х 2000',
     '490'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-01.png',
-    'Гаражные секционные ворота RSD01 3000 х 2500',
+    'Гаражные секционные ворота DoorHan RSD01 3000 х 2500',
     '550'
   ),
 ];
@@ -46,92 +46,92 @@ const priceRsd01 = [
 const priceRsd02 = [
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 2500 х 2000',
+    'Гаражные секционные ворота DoorHan RSD02 2500 х 2000',
     '500'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 2500 х 2500',
+    'Гаражные секционные ворота DoorHan RSD02 2500 х 2500',
     '520'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 2500 х 3000',
+    'Гаражные секционные ворота DoorHan RSD02 2500 х 3000',
     '650'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 3000 х 2000',
+    'Гаражные секционные ворота DoorHan RSD02 3000 х 2000',
     '540'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 2500 х 2500',
+    'Гаражные секционные ворота DoorHan RSD02 2500 х 2500',
     '580'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 3000 х 3000',
+    'Гаражные секционные ворота DoorHan RSD02 3000 х 3000',
     '690'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 3500 х 2000',
+    'Гаражные секционные ворота DoorHan RSD02 3500 х 2000',
     '600'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 3500 х 2500',
+    'Гаражные секционные ворота DoorHan RSD02 3500 х 2500',
     '640'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 3500 х 3000',
+    'Гаражные секционные ворота DoorHan RSD02 3500 х 3000',
     '760'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 4000 х 2000',
+    'Гаражные секционные ворота DoorHan RSD02 4000 х 2000',
     '640'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 4000 х 2500',
+    'Гаражные секционные ворота DoorHan RSD02 4000 х 2500',
     '800'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 4000 х 3000',
+    'Гаражные секционные ворота DoorHan RSD02 4000 х 3000',
     '850'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 4500 х 2000',
+    'Гаражные секционные ворота DoorHan RSD02 4500 х 2000',
     '690'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 4500 х 2500',
+    'Гаражные секционные ворота DoorHan RSD02 4500 х 2500',
     '800'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 4500 х 3000',
+    'Гаражные секционные ворота DoorHan RSD02 4500 х 3000',
     '940'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 5000 х 2000',
+    'Гаражные секционные ворота DoorHan RSD02 5000 х 2000',
     '790'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 5000 х 2500',
+    'Гаражные секционные ворота DoorHan RSD02 5000 х 2500',
     '890'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-rsd-02.png',
-    'Гаражные секционные ворота RSD02 5000 х 3000',
+    'Гаражные секционные ворота DoorHan RSD02 5000 х 3000',
     '1090'
   ),
 ];
@@ -139,22 +139,22 @@ const priceRsd02 = [
 const priceIsd01 = [
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-isd-01.png',
-    'Гаражные секционные ворота RSD01 3500 х 3500',
+    'Гаражные секционные ворота DoorHan RSD01 3500 х 3500',
     '940'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-isd-01.png',
-    'Гаражные секционные ворота RSD01 4000 х 3500',
+    'Гаражные секционные ворота DoorHan RSD01 4000 х 3500',
     '1050'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-isd-01.png',
-    'Гаражные секционные ворота RSD01 4500 х 4000',
+    'Гаражные секционные ворота DoorHan RSD01 4500 х 4000',
     '1300'
   ),
   new ModelPriceSection(
     '../../../assets/img/catalog/section/img-price-isd-01.png',
-    'Гаражные секционные ворота RSD01 4500 х 4500',
+    'Гаражные секционные ворота DoorHan RSD01 4500 х 4500',
     '1440'
   ),
 ];

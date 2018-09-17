@@ -8,7 +8,7 @@ const catalog = [
   new Catalog(3, 'Противопожарные ворота', 'assets/img/catalog/anti-fire/anti-fire.jpg', 'anti-fire'),
   new Catalog(4, 'Автоматика', 'assets/img/catalog/avtomatica/avtomatica.jpg', 'avtomatica'),
   new Catalog(5, 'Шлагбаумы, цепные барьеры', 'assets/img/catalog/barrier/barrier-logo.jpg', 'barrier'),
-  new Catalog(6, 'Ролтставни, рольворота', 'assets/img/catalog/rollet/rollet.jpg', 'rollet'),
+  new Catalog(6, 'Рольставни, рольворота', 'assets/img/catalog/rollet/rollet.jpg', 'rollet'),
   new Catalog(7, 'Скоростные ворота', 'assets/img/catalog/speed-roll/speed-roll.jpg', 'speed-roll'),
   new Catalog(8, 'Перегрузочное оборудование', 'assets/img/catalog/transshipment/transshipment.jpg', 'transshipment'),
   new Catalog(9, 'Рампы, столы подьемные', 'assets/img/catalog/ramp-and-table/ramp-and-table.jpg', 'ramp-and-table'),
