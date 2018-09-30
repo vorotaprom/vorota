@@ -18,6 +18,9 @@
 .carousel-caption-title {
   font-size: 2rem;
   margin-bottom: 10px;
+  @media (max-width: 575px) {
+    margin-bottom: 0;
+  }
 }
 .carousel-caption-link {
   color: #fff;
@@ -26,6 +29,9 @@
   margin-right: 10px;
   position: relative;
   display: inline-block;
+  @media (max-width: 575px) {
+    display: none;
+  }
 }
 .carousel-caption-link:hover {
   text-decoration: underline;

@@ -11,14 +11,10 @@ import { Carusel } from '../../shared/carusel/carusel';
 
 import { WOW } from '../../../../node_modules/wowjs/dist/wow';
 
-// import { Router, NavigationEnd, Event } from '@angular/router';
-// import { NgwWowService } from 'ngx-wow';
-// import { Subscription } from 'rxjs/Subscription';
-
 @Component({
   selector: 'app-carusel',
   templateUrl: './carusel.component.html',
-  styleUrls: ['./carusel.component.css']
+  styleUrls: ['./carusel.component.scss']
 })
 export class CaruselComponent implements OnInit {
   public innerHeight: String;

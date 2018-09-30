@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 @Injectable()
 export class FeadBackService {
 
-  private url = 'http://www.vorotaprom.com.ua/fead-back.php';
+  private url = 'http://www.vorotaprom.com.ua/php/fead-back.php';
 
   constructor(
     @Inject(forwardRef(() => Http))

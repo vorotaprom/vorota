@@ -25,4 +25,8 @@ export class HomeCotalogComponent implements OnInit {
   ngOnInit() {
     this.catalogService.getCatalog().then(result => this.homeCatalog = result);
   }
+
+  public onSelect() {
+    document.documentElement.scrollTop = 0;
+  }
 }

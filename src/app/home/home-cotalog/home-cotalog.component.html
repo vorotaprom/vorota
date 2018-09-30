@@ -4,14 +4,13 @@
     <section class="catalog row justify-content-md-center">
 
       <div class="catalog__items col-xl-4 col-md-6 col-sm-12 wow pulse" *ngFor="let item of homeCatalog">
-        <a href="#" class="catalog__items-link" routerLink="/catalog/{{item.rLink}}">
+        <a href="#" class="catalog__items-link" routerLink="/catalog/{{item.rLink}}" (click)="onSelect()">
           <div class="catalog__item">
             <h3 class="catalog__item-title">{{ item.title }}</h3>
             <img class="catalog__item-img" src="{{ item.src }}" alt="{{ item.title }}" title="{{ item.title }}">
           </div>
         </a>
       </div>
-
     </section>
   </div>
 </div>
