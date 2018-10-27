@@ -4,7 +4,7 @@ import {ComplectAutomaticModel} from './comlect-automatic.model';
 import {PriceAutomaticaModel} from './price-automatica.model';
 
 const sl500 = new PriceAutomaticaModel(
-  '../../../assets/img/catalog/price-automatica/sliding/Комплект-привода-SLIDING-500.jpg',
+  '../../../assets/img/catalog/price-automatica/sliding/SLIDING-500.jpg',
   'Комплект привода doorhan SLIDING-500',
   193,
   [
@@ -27,7 +27,7 @@ const sl500 = new PriceAutomaticaModel(
   ]
 );
 const sl800 = new PriceAutomaticaModel(
-  '../../../assets/img/catalog/price-automatica/sliding/Комплект-привода-SLIDING-800.jpg',
+  '../../../assets/img/catalog/price-automatica/sliding/SLIDING-800.jpg',
   'Комплект привода doorhan SLIDING-800',
   201,
   [
@@ -50,7 +50,7 @@ const sl800 = new PriceAutomaticaModel(
   ]
 );
 const sl1300 = new PriceAutomaticaModel(
-  '../../../assets/img/catalog/price-automatica/sliding/Комплект-привода-SLIDING-1300.jpg',
+  '../../../assets/img/catalog/price-automatica/sliding/SLIDING-1300.jpg',
   'Комплект привода doorhan SLIDING-1300',
   220,
   [
@@ -73,7 +73,7 @@ const sl1300 = new PriceAutomaticaModel(
   ]
 );
 const sl2100 = new PriceAutomaticaModel(
-  '../../../assets/img/catalog/price-automatica/sliding/Комплект-привода-SLIDING-2100.jpg',
+  '../../../assets/img/catalog/price-automatica/sliding/SLIDING-2100.jpg',
   'Комплект привода doorhan SLIDING-2100',
   266,
   [

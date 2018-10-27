@@ -4,7 +4,7 @@ import {ComplectAutomaticModel} from './comlect-automatic.model';
 import {PriceAutomaticaModel} from './price-automatica.model';
 
 const sw2500 = new PriceAutomaticaModel(
-  '../../../assets/img/catalog/price-automatica/swing/Комплект-привода-SW-2500KIT.jpg',
+  '../../../assets/img/catalog/price-automatica/swing/SW-2500KIT.jpg',
   'Комплект привода doorhan SW-2500KIT',
   266,
   [
@@ -27,7 +27,7 @@ const sw2500 = new PriceAutomaticaModel(
   ]
 );
 const sw3000 = new PriceAutomaticaModel(
-  '../../../assets/img/catalog/price-automatica/swing/Комплект-привода-SW-3000PROKIT.jpg',
+  '../../../assets/img/catalog/price-automatica/swing/SW-3000PROKIT.jpg',
   'Комплект привода doorhan SW-3000PROKIT',
   385,
   [
@@ -50,7 +50,7 @@ const sw3000 = new PriceAutomaticaModel(
   ]
 );
 const sw5000 = new PriceAutomaticaModel(
-  '../../../assets/img/catalog/price-automatica/swing/Комплект-привода-SW-5000PROKIT.jpg',
+  '../../../assets/img/catalog/price-automatica/swing/SW-5000PROKIT.jpg',
   'Комплект привода doorhan SW-5000PROKIT',
   398,
   [
@@ -73,7 +73,7 @@ const sw5000 = new PriceAutomaticaModel(
   ]
 );
 const arm320 = new PriceAutomaticaModel(
-  '../../../assets/img/catalog/price-automatica/swing/Комплект-привода-ARM-320PRO-KIT.jpg',
+  '../../../assets/img/catalog/price-automatica/swing/ARM-320PRO-KIT.jpg',
   'Комплект привода doorhan ARM-320PRO KIT',
   358,
   [
