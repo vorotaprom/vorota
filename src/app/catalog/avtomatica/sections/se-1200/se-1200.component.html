@@ -5,7 +5,20 @@
   <p class="product__description">
     Электромеханический привод цепного типа Sectional-1200 предназначен для автоматизации бытовых секционных ворот площадью до 16 кв. м.
   </p>
-  <img class="product__img" src="assets/img/catalog/avtomatica/sections/poster-se-1200.jpg" alt="Привод SECTIONAL-1200">
+  <div *ngIf="price" class="row automatica-price-wrp">
+    <div class="col-md-4 price-img-wrp">
+      <img src="{{ price.img }}" alt="price-title" class="price-img">
+    </div>
+    <div class="col-md-8 price-title-wrp align-items-center">
+      <h3 class="price-title">{{price.title}}</h3>
+      <ul class="price-description">
+        <li *ngFor="let item of price.complect">{{item.title}} - <span>{{item.units}}</span></li>
+      </ul>
+      <div class="price">{{(price.price * course).toFixed()}} грн.</div>
+      <!-- <button class="prise-item-btn">заказать</button> -->
+    </div>
+  </div>
+  <!-- <img class="product__img" src="assets/img/catalog/avtomatica/sections/poster-se-1200.jpg" alt="Привод SECTIONAL-1200"> -->
 </div>
 <!-- Product main end -->
 <!-- Specification start -->

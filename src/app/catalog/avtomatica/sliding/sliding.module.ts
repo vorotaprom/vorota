@@ -7,6 +7,9 @@ import { Sliding800Component } from './sliding-800/sliding-800.component';
 import { Sliding1300proComponent } from './sliding-1300pro/sliding-1300pro.component';
 import { Sliding2100proComponent } from './sliding-2100pro/sliding-2100pro.component';
 
+import { PriceSlidingService } from '../../../shared/automatica/price-sliding.service';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,6 +19,8 @@ import { Sliding2100proComponent } from './sliding-2100pro/sliding-2100pro.compo
     Sliding500Component,
     Sliding800Component,
     Sliding1300proComponent,
-    Sliding2100proComponent]
+    Sliding2100proComponent
+  ],
+  providers: [PriceSlidingService]
 })
 export class SlidingModule { }

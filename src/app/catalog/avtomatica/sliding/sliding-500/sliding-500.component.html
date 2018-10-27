@@ -5,7 +5,20 @@
     <p class="product__description">
       Электромеханический привод Sliding-500 предназнaчен для aвтоматизации сдвижных ворот весом до 500 кг.
     </p>
-    <img class="product__img" src="../../../../../assets/img/catalog/avtomatica/sliding/poster-sliding-500-800.jpg" alt="Привод SLIDING-500">
+    <div *ngIf="price" class="row automatica-price-wrp">
+      <div class="col-md-4 price-img-wrp">
+        <img src="{{ price.img }}" alt="price-title" class="price-img">
+      </div>
+      <div class="col-md-8 price-title-wrp align-items-center">
+        <h3 class="price-title">{{price.title}}</h3>
+        <ul class="price-description">
+          <li *ngFor="let item of price.complect">{{item.title}} - <span>{{item.units}}</span></li>
+        </ul>
+        <div class="price">{{(price.price * course).toFixed()}} грн.</div>
+        <!-- <button class="prise-item-btn">заказать</button> -->
+      </div>
+    </div>
+    <!-- <img class="product__img" src="../../../../../assets/img/catalog/avtomatica/sliding/poster-sliding-500-800.jpg" alt="Привод SLIDING-500"> -->
   </div>
   <!-- Product main end -->
   <!-- Specification start -->

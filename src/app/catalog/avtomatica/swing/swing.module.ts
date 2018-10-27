@@ -8,6 +8,8 @@ import { Swing5000proComponent } from './swing-5000pro/swing-5000pro.component';
 import { Arm230Component } from './arm-230/arm-230.component';
 import { Arm320proComponent } from './arm-320pro/arm-320pro.component';
 
+import { PriceSwingService } from '../../../shared/automatica/price-swing.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +20,8 @@ import { Arm320proComponent } from './arm-320pro/arm-320pro.component';
     Swing3000proComponent,
     Swing5000proComponent,
     Arm230Component,
-    Arm320proComponent]
+    Arm320proComponent
+  ],
+  providers: [PriceSwingService]
 })
 export class SwingModule { }

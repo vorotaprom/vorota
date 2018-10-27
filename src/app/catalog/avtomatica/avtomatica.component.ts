@@ -7,7 +7,7 @@ import { Catalog } from '../../shared/catalog/catalog';
 @Component({
   selector: 'app-avtomatica',
   templateUrl: './avtomatica.component.html',
-  styleUrls: ['./avtomatica.component.css']
+  styleUrls: ['./avtomatica.component.scss']
 })
 export class AvtomaticaComponent implements OnInit {
 

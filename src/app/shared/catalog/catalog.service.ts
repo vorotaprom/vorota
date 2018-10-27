@@ -45,7 +45,7 @@ const catalogAvtomaticSwing = [
   new Catalog(1, 'swing 2500', 'assets/img/catalog/avtomatica/swing/swing-2500.jpg', 'swing-2500'),
   new Catalog(2, 'swing 3000pro', 'assets/img/catalog/avtomatica/swing/swing-3000-5000pro.jpg', 'swing-3000pro'),
   new Catalog(3, 'swing 5000pro', 'assets/img/catalog/avtomatica/swing/swing-3000-5000pro.jpg', 'swing-5000pro'),
-  new Catalog(4, 'arm 230', 'assets/img/catalog/avtomatica/swing/arm-230.jpg', 'arm-230'),
+  // new Catalog(4, 'arm 230', 'assets/img/catalog/avtomatica/swing/arm-230.jpg', 'arm-230'),
   new Catalog(5, 'arm 320pro', 'assets/img/catalog/avtomatica/swing/arm-320pro.jpg', 'arm-320pro'),
 ];
 const catalogBarrier = [

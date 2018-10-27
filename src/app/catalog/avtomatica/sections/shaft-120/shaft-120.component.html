@@ -5,7 +5,20 @@
     <p class="product__description">
       Электромеханический привод вального типа Shaft-120 предназначен для автоматизации промышленных секционных ворот.
     </p>
-    <img class="product__img" src="../../../../../assets/img/catalog/avtomatica/sections/poster-shaft-120.jpg" alt="Привод SHAFT-60">
+    <div *ngIf="price" class="row automatica-price-wrp">
+      <div class="col-md-4 price-img-wrp">
+        <img src="{{ price.img }}" alt="price-title" class="price-img">
+      </div>
+      <div class="col-md-8 price-title-wrp align-items-center">
+        <h3 class="price-title">{{price.title}}</h3>
+        <ul class="price-description">
+          <li *ngFor="let item of price.complect">{{item.title}} - <span>{{item.units}}</span></li>
+        </ul>
+        <div class="price">{{(price.price * course).toFixed()}} грн.</div>
+        <!-- <button class="prise-item-btn">заказать</button> -->
+      </div>
+    </div>
+    <!-- <img class="product__img" src="../../../../../assets/img/catalog/avtomatica/sections/poster-shaft-120.jpg" alt="Привод SHAFT-60"> -->
   </div>
   <!-- Product main end -->
   <!-- Specification start -->

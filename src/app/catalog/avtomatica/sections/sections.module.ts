@@ -12,6 +12,8 @@ import { Shaft50proComponent } from './shaft-50pro/shaft-50pro.component';
 import { Shaft60Component } from './shaft-60/shaft-60.component';
 import { Shaft120Component } from './shaft-120/shaft-120.component';
 
+import {PriceSectionsService} from '../../../shared/automatica/price-sections.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import { Shaft120Component } from './shaft-120/shaft-120.component';
     Shaft50proComponent,
     Shaft60Component,
     Shaft120Component
-  ]
+  ],
+  providers: [PriceSectionsService]
 })
 export class SectionsModule { }

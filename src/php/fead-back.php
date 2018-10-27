@@ -5,7 +5,7 @@ switch($_SERVER['REQUEST_METHOD']){
 			header("Access-Control-Allow-Methods: POST");
 			header("Access-Control-Allow-Headers: content-type");
 			exit;
-	case("POST"): 
+	case("POST"):
 			header("Access-Control-Allow-Origin: *");
 
 			$json = file_get_contents('php://input');
@@ -29,7 +29,7 @@ switch($_SERVER['REQUEST_METHOD']){
 
 			mail($recipient, $subject, $message, $headers);
 			break;
-	default: 
+	default:
 			header("Allow: POST", true, 405);
 			exit;
 }

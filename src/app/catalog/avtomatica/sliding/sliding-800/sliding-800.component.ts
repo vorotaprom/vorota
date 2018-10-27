@@ -6,6 +6,9 @@ import { Constructions, CharacteristicTechnical } from './characteristics';
 import { Product } from '../../../../shared/automatica/product';
 
 import { AutomaticaService } from '../../../../shared/automatica/automatica.service';
+
+import {PriceSlidingService} from '../../../../shared/automatica/price-sliding.service';
+import {PriceAutomaticaModel} from '../../../../shared/automatica/price-automatica.model';
 @Component({
   selector: 'app-sliding-800',
   templateUrl: './sliding-800.component.html',
@@ -19,12 +22,23 @@ export class Sliding800Component implements OnInit {
 
   public specification = false;
 
+  public price: PriceAutomaticaModel;
+  public course: number;
+
   constructor(
     @Inject(forwardRef(() => AutomaticaService))
-    public automaticaService: AutomaticaService
+    public automaticaService: AutomaticaService,
+    @Inject(forwardRef(() => PriceSlidingService))
+    public priceSlidingService: PriceSlidingService
   ) { }
 
   ngOnInit() {
+    this.priceSlidingService.getPriceSl800().then(result => {
+      this.price = result;
+    });
+
+    this.course = this.automaticaService.getCourse();
+
     this.constructions = Constructions;
     this.specifications = CharacteristicTechnical;
 

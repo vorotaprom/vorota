@@ -6,6 +6,8 @@ import { Constructions, CharacteristicTechnical } from './characteristics';
 import { Product } from '../../../../shared/automatica/product';
 
 import { AutomaticaService } from '../../../../shared/automatica/automatica.service';
+import {PriceSectionsService} from '../../../../shared/automatica/price-sections.service';
+import {PriceAutomaticaModel} from '../../../../shared/automatica/price-automatica.model';
 @Component({
   selector: 'app-shaft-120',
   templateUrl: './shaft-120.component.html',
@@ -19,12 +21,23 @@ export class Shaft120Component implements OnInit {
 
   public specification = false;
 
+  public price: PriceAutomaticaModel;
+  public course: number;
+
   constructor(
     @Inject(forwardRef(() => AutomaticaService))
-    public automaticaService: AutomaticaService
+    public automaticaService: AutomaticaService,
+    @Inject(forwardRef(() => PriceSectionsService))
+    public priceSectionsService: PriceSectionsService
   ) { }
 
   ngOnInit() {
+    this.priceSectionsService.getPriceSection120().then(result => {
+      this.price = result;
+    });
+
+    this.course = this.automaticaService.getCourse();
+
     this.constructions = Constructions;
     this.specifications = CharacteristicTechnical;
 

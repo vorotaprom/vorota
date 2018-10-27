@@ -6,6 +6,10 @@ import { Constructions, CharacteristicTechnical } from './characteristics';
 import { Product } from '../../../../shared/automatica/product';
 
 import { AutomaticaService } from '../../../../shared/automatica/automatica.service';
+
+import {PriceSwingService} from '../../../../shared/automatica/price-swing.service';
+import {PriceAutomaticaModel} from '../../../../shared/automatica/price-automatica.model';
+
 @Component({
   selector: 'app-swing-2500',
   templateUrl: './swing-2500.component.html',
@@ -19,12 +23,23 @@ export class Swing2500Component implements OnInit {
 
   public specification = false;
 
+  public price: PriceAutomaticaModel;
+  public course: number;
+
   constructor(
     @Inject(forwardRef(() => AutomaticaService))
-    public automaticaService: AutomaticaService
+    public automaticaService: AutomaticaService,
+    @Inject(forwardRef(() => PriceSwingService))
+    public priceSwingService: PriceSwingService
   ) { }
 
   ngOnInit() {
+    this.priceSwingService.getPriceSw2500().then(result => {
+      this.price = result;
+    });
+
+    this.course = this.automaticaService.getCourse();
+
     this.constructions = Constructions;
     this.specifications = CharacteristicTechnical;
 

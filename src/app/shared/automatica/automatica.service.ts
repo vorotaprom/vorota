@@ -5,6 +5,9 @@ import { Specification } from './specification';
 
 @Injectable()
 export class AutomaticaService {
+
+  courseEuro = 32.7;
+
   products = {
     transmitter2Pro: new Product(
       '../../../assets/img/catalog/avtomatica/acsessuars/transmitter-2-pro.jpg',
@@ -467,7 +470,11 @@ export class AutomaticaService {
 
     return obj;
   }
-}
+
+  getCourse(): number {
+    return this.courseEuro;
+  }
+ }
 
 
 
