@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, forwardRef } from '@angular/core';
+import { Component, OnInit, Inject, forwardRef, ViewChild } from '@angular/core';
 
 import { Size, Construction, Specification } from '../../../../shared/catalog/idex';
 import { Constructions, CharacteristicTechnical } from './characteristics';
@@ -9,10 +9,11 @@ import { AutomaticaService } from '../../../../shared/automatica/automatica.serv
 import {PriceSectionsService} from '../../../../shared/automatica/price-sections.service';
 import {PriceAutomaticaModel} from '../../../../shared/automatica/price-automatica.model';
 
+import { ModalFromOrderSe1200Component } from './modal-from-order-se1200/modal-from-order-se1200.component';
+
 @Component({
   selector: 'app-se-1200',
-  templateUrl: './se-1200.component.html',
-  styleUrls: ['./se-1200.component.css']
+  templateUrl: './se-1200.component.html'
 })
 export class Se1200Component implements OnInit {
 
@@ -24,6 +25,9 @@ export class Se1200Component implements OnInit {
 
   public price: PriceAutomaticaModel;
   public course: number;
+
+  @ViewChild(ModalFromOrderSe1200Component)
+  modalFromOrderSe1200Component: ModalFromOrderSe1200Component;
 
   constructor(
     @Inject(forwardRef(() => AutomaticaService))
@@ -77,4 +81,7 @@ export class Se1200Component implements OnInit {
     });
   }
 
+  showModalOrder(title) {
+    this.modalFromOrderSe1200Component.openModal(title);
+  }
 }

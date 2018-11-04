@@ -38,7 +38,7 @@ export class TorsionalComponent implements OnInit {
   @ViewChild(MadalFormOrderTorsionalComponent)
   madalFormOrderTorsional: MadalFormOrderTorsionalComponent;
 
-  constructor(@Inject(WINDOW) private window: Window, 
+  constructor(@Inject(WINDOW) private window: Window,
     @Inject(forwardRef(() => SectionsService))
     public sectionsService: SectionsService,
   ) {}

@@ -15,7 +15,7 @@
           <li *ngFor="let item of price.complect">{{item.title}} - <span>{{item.units}}</span></li>
         </ul>
         <div class="price">{{(price.price * course).toFixed()}} грн.</div>
-        <!-- <button class="prise-item-btn">заказать</button> -->
+        <button class="prise-item-btn" (click)="showModalOrder(price.title)">заказать</button>
       </div>
     </div>
     <!-- <img class="product__img" src="../../../../../assets/img/catalog/avtomatica/sections/poster-shaft-120.jpg" alt="Привод SHAFT-60"> -->
@@ -64,3 +64,4 @@
   </div>
   <!-- Acsessuar vorot end -->
 </div>
+<app-modal-from-order-shaft120></app-modal-from-order-shaft120>

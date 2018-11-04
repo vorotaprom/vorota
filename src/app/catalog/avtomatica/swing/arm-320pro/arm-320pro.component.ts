@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, forwardRef } from '@angular/core';
+import { Component, OnInit, Inject, forwardRef, ViewChild } from '@angular/core';
 
 import { Size, Construction, Specification } from '../../../../shared/catalog/idex';
 import { Constructions, CharacteristicTechnical } from './characteristics';
@@ -10,10 +10,11 @@ import { AutomaticaService } from '../../../../shared/automatica/automatica.serv
 import {PriceSwingService} from '../../../../shared/automatica/price-swing.service';
 import {PriceAutomaticaModel} from '../../../../shared/automatica/price-automatica.model';
 
+import { ModalFromOrderArm320proComponent } from './modal-from-order-arm320pro/modal-from-order-arm320pro.component';
+
 @Component({
   selector: 'app-arm-320pro',
-  templateUrl: './arm-320pro.component.html',
-  styleUrls: ['./arm-320pro.component.css']
+  templateUrl: './arm-320pro.component.html'
 })
 export class Arm320proComponent implements OnInit {
 
@@ -25,6 +26,9 @@ export class Arm320proComponent implements OnInit {
 
   public price: PriceAutomaticaModel;
   public course: number;
+
+  @ViewChild(ModalFromOrderArm320proComponent)
+  modalFromOrderArm320proComponent: ModalFromOrderArm320proComponent;
 
   constructor(
     @Inject(forwardRef(() => AutomaticaService))
@@ -79,4 +83,7 @@ export class Arm320proComponent implements OnInit {
     });
   }
 
+  showModalOrder(title) {
+    this.modalFromOrderArm320proComponent.openModal(title);
+  }
 }

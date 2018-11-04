@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, forwardRef } from '@angular/core';
+import { Component, OnInit, Inject, forwardRef, ViewChild } from '@angular/core';
 
 import { Size, Construction, Specification } from '../../../../shared/catalog/idex';
 import { Constructions, CharacteristicTechnical } from './characteristics';
@@ -10,10 +10,11 @@ import { AutomaticaService } from '../../../../shared/automatica/automatica.serv
 import {PriceSwingService} from '../../../../shared/automatica/price-swing.service';
 import {PriceAutomaticaModel} from '../../../../shared/automatica/price-automatica.model';
 
+import { ModalFromOrderSwing3000proComponent } from './modal-from-order-swing3000pro/modal-from-order-swing3000pro.component';
+
 @Component({
   selector: 'app-swing-3000pro',
-  templateUrl: './swing-3000pro.component.html',
-  styleUrls: ['./swing-3000pro.component.css']
+  templateUrl: './swing-3000pro.component.html'
 })
 export class Swing3000proComponent implements OnInit {
 
@@ -25,6 +26,9 @@ export class Swing3000proComponent implements OnInit {
 
   public price: PriceAutomaticaModel;
   public course: number;
+
+  @ViewChild(ModalFromOrderSwing3000proComponent)
+  modalFromOrderSwing3000proComponent: ModalFromOrderSwing3000proComponent;
 
   constructor(
     @Inject(forwardRef(() => AutomaticaService))
@@ -79,4 +83,7 @@ export class Swing3000proComponent implements OnInit {
     });
   }
 
+  showModalOrder(title) {
+    this.modalFromOrderSwing3000proComponent.openModal(title);
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, forwardRef } from '@angular/core';
+import { Component, OnInit, Inject, forwardRef, ViewChild } from '@angular/core';
 
 import { Size, Construction, Specification } from '../../../../shared/catalog/idex';
 import { Constructions, CharacteristicTechnical } from './characteristics';
@@ -9,10 +9,12 @@ import { AutomaticaService } from '../../../../shared/automatica/automatica.serv
 
 import {PriceSlidingService} from '../../../../shared/automatica/price-sliding.service';
 import {PriceAutomaticaModel} from '../../../../shared/automatica/price-automatica.model';
+
+import { ModalFromOrderSliding800Component } from './modal-from-order-sliding800/modal-from-order-sliding800.component';
+
 @Component({
   selector: 'app-sliding-800',
-  templateUrl: './sliding-800.component.html',
-  styleUrls: ['./sliding-800.component.css']
+  templateUrl: './sliding-800.component.html'
 })
 export class Sliding800Component implements OnInit {
 
@@ -24,6 +26,9 @@ export class Sliding800Component implements OnInit {
 
   public price: PriceAutomaticaModel;
   public course: number;
+
+  @ViewChild(ModalFromOrderSliding800Component)
+  modalFromOrderSliding800Component: ModalFromOrderSliding800Component;
 
   constructor(
     @Inject(forwardRef(() => AutomaticaService))
@@ -76,4 +81,7 @@ export class Sliding800Component implements OnInit {
     });
   }
 
+  showModalOrder(title) {
+    this.modalFromOrderSliding800Component.openModal(title);
+  }
 }

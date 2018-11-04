@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, forwardRef } from '@angular/core';
+import { Component, OnInit, Inject, forwardRef, ViewChild } from '@angular/core';
 
 import { Size, Construction, Specification } from '../../../../shared/catalog/idex';
 import { Constructions, CharacteristicTechnical } from './characteristics';
@@ -9,11 +9,11 @@ import { AutomaticaService } from '../../../../shared/automatica/automatica.serv
 import {PriceSectionsService} from '../../../../shared/automatica/price-sections.service';
 import {PriceAutomaticaModel} from '../../../../shared/automatica/price-automatica.model';
 
+import { ModalFormOrderSe800proComponent } from './modal-form-order-se800pro/modal-form-order-se800pro.component';
 
 @Component({
   selector: 'app-se-800pro',
-  templateUrl: './se-800pro.component.html',
-  styleUrls: ['./se-800pro.component.scss']
+  templateUrl: './se-800pro.component.html'
 })
 export class Se800proComponent implements OnInit {
 
@@ -25,6 +25,9 @@ export class Se800proComponent implements OnInit {
 
   public price: PriceAutomaticaModel;
   public course: number;
+
+  @ViewChild(ModalFormOrderSe800proComponent)
+  modalFormOrderSe800proComponent: ModalFormOrderSe800proComponent;
 
   constructor(
     @Inject(forwardRef(() => AutomaticaService))
@@ -76,5 +79,9 @@ export class Se800proComponent implements OnInit {
         return;
       }
     });
+  }
+
+  showModalOrder(title) {
+    this.modalFormOrderSe800proComponent.openModal(title);
   }
 }

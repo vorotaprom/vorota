@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, forwardRef } from '@angular/core';
+import { Component, OnInit, Inject, forwardRef, ViewChild } from '@angular/core';
 
 import { Size, Construction, Specification } from '../../../../shared/catalog/idex';
 import { Constructions, CharacteristicTechnical } from './characteristics';
@@ -8,6 +8,8 @@ import { Product } from '../../../../shared/automatica/product';
 import { AutomaticaService } from '../../../../shared/automatica/automatica.service';
 import {PriceSectionsService} from '../../../../shared/automatica/price-sections.service';
 import {PriceAutomaticaModel} from '../../../../shared/automatica/price-automatica.model';
+
+import { ModalFromOrderShaft50proComponent } from './modal-from-order-shaft50pro/modal-from-order-shaft50pro.component';
 
 @Component({
   selector: 'app-shaft-50pro',
@@ -24,6 +26,9 @@ export class Shaft50proComponent implements OnInit {
 
   public price: PriceAutomaticaModel;
   public course: number;
+
+  @ViewChild(ModalFromOrderShaft50proComponent)
+  modalFromOrderShaft50proComponent: ModalFromOrderShaft50proComponent;
 
   constructor(
     @Inject(forwardRef(() => AutomaticaService))
@@ -76,4 +81,7 @@ export class Shaft50proComponent implements OnInit {
     });
   }
 
+  showModalOrder(title) {
+    this.modalFromOrderShaft50proComponent.openModal(title);
+  }
 }

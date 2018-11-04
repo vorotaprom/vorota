@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, forwardRef } from '@angular/core';
+import { Component, OnInit, Inject, forwardRef, ViewChild } from '@angular/core';
 
 import { Size, Construction, Specification } from '../../../../shared/catalog/idex';
 import { Constructions, CharacteristicTechnical } from './characteristics';
@@ -9,10 +9,11 @@ import { AutomaticaService } from '../../../../shared/automatica/automatica.serv
 import {PriceSectionsService} from '../../../../shared/automatica/price-sections.service';
 import {PriceAutomaticaModel} from '../../../../shared/automatica/price-automatica.model';
 
+import { ModalFromOrderSe1000proComponent } from './modal-from-order-se1000pro/modal-from-order-se1000pro.component';
+
 @Component({
   selector: 'app-se-1000pro',
-  templateUrl: './se-1000pro.component.html',
-  styleUrls: ['./se-1000pro.component.css']
+  templateUrl: './se-1000pro.component.html'
 })
 export class Se1000proComponent implements OnInit {
 
@@ -25,11 +26,14 @@ export class Se1000proComponent implements OnInit {
   public price: PriceAutomaticaModel;
   public course: number;
 
+  @ViewChild(ModalFromOrderSe1000proComponent)
+  modalFromOrderSe1000proComponent: ModalFromOrderSe1000proComponent;
+
   constructor(
     @Inject(forwardRef(() => AutomaticaService))
     public automaticaService: AutomaticaService,
     @Inject(forwardRef(() => PriceSectionsService))
-    public priceSectionsService: PriceSectionsService
+    public priceSectionsService: PriceSectionsService,
   ) { }
 
   ngOnInit() {
@@ -75,6 +79,10 @@ export class Se1000proComponent implements OnInit {
         return;
       }
     });
+  }
+
+  showModalOrder(title) {
+    this.modalFromOrderSe1000proComponent.openModal(title);
   }
 
 }
