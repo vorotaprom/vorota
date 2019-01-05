@@ -60,9 +60,5 @@ export class AppComponent {
 
       this.triger = true;
   }
-
-  public onTop() {
-    document.documentElement.scrollTop = 0;
-  }
 }
 

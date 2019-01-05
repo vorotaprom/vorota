@@ -28,6 +28,5 @@ export class RolletComponent implements OnInit {
   }
   onSelect(selected: Catalog) {
     this.router.navigate([selected.rLink], { relativeTo: this.activatedRouter });
-    document.documentElement.scrollTop = 0;
   }
 }
