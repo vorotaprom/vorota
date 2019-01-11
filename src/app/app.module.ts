@@ -9,7 +9,6 @@ import { MetaModule, MetaConfig } from 'ng2-meta';
 import { AppRoutingModule } from './app-routing.module';
 
 import { CarouselModule, ModalModule } from 'ngx-bootstrap';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
@@ -81,7 +80,6 @@ const metaConfig:  MetaConfig  = {
     NgtUniversalModule,
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
-    MDBBootstrapModule.forRoot(),
     MetaModule.forRoot(metaConfig),
     HttpModule,
     FormsModule,

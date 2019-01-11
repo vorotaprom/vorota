@@ -1,0 +1,40 @@
+.title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-top: 55px;
+}
+
+.carusel-wrp {
+  overflow: hidden;
+  .slides {
+    .slide-item {
+      transition: all 1s;
+      .slide-img-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 230px;
+      }
+      .slide-img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        border-style: none;
+        pointer-events: none;
+      }
+      .slide-title-wrap {
+        height: 80px;
+        text-align: center;
+      }
+
+      .slide-title {
+        text-transform: none;
+        max-width: 290px;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0 auto;
+      }
+    }
+  }
+}
